@@ -1,12 +1,13 @@
 #' @title Mater5_2 kernel
 #' @description
-#' Compute the matern5_2 kernel
+#' Compute the Matern5_2 kernel.
 #' @param d the distance.
 #' @param beta the inverse of range parameter.
+#' @references Gu, M., & Xu, Y. (2020). Fast nonseparable Gaussian stochastic process with application to methylation level interpolation. Journal of Computational and Graphical Statistics, 29(2), 250-260.
 #' @examples
-#' 
+#'
 #'matern_5_2_kernel(0.5, beta = 2)
-#'  
+#'
 #' @export
 #'
 

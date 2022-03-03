@@ -22,7 +22,7 @@ Suggests:
     ggplot2,
     ggrepel,
     ggthemes,
-    kableExtra,
-    stringr
+    DiceEval,
+    tidyr
 RoxygenNote: 7.1.2
 VignetteBuilder: knitr

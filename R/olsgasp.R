@@ -2,6 +2,8 @@
 #' @import data.table
 #' @import FastGP
 #' @import FastGaSP
+#' @importFrom stats optim
+#' @importFrom data.table :=
 #' @importFrom ZIprop scale_01
 #' @description
 #' We propose a by block-permutation-based methodology (i) to identify factors (discrete or continuous)

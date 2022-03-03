@@ -5,10 +5,10 @@
 #' @param sites a numeric vector of size equal to the number of col of Y_obs with the sites location.
 #' @param X a matrix, data frame or data table with the covariables same number of row as Y_obs.
 #' @param tol_eig the threshold for the eigen values of the wo SVD
-#' @return A list with all the object necassary to the estimation and prediction.
+#' @return a list with all the object necessary to the estimation and prediction.
 #' @examples
 #'
-#' library(FastGP)
+#'library(FastGP)
 #'N = 100
 #'K = 10
 #'D = 2
@@ -27,14 +27,14 @@
 #'  R_tilde = R + nugget[d] * diag(N)
 #'  V[d, ] = rcpp_rmvnorm_stable(1, R, rep(0, N))
 #'}
-#' Y_obs = A %*% V
+#'Y_obs = A %*% V
 #'obj_olsgasp = svd_olsgasp(Y_obs,sites,X,tol_eig = 1e-6)
 #' @export
 #'
 
 
 
-svd_olsgasp = function(Y_obs,sites,X,tol_eig = 0 ){
+svd_olsgasp = function(Y_obs,sites,X,tol_eig = 0){
 
   if(sum(sites != sort(sites))>0){
     stop("sites must be sorted")
