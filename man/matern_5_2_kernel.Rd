@@ -20,5 +20,8 @@ matern_5_2_kernel(0.5, beta = 2)
 
 }
 \references{
-Gu, M., & Xu, Y. (2020). Fast nonseparable Gaussian stochastic process with application to methylation level interpolation. Journal of Computational and Graphical Statistics, 29(2), 250-260.
+Gu, M., & Xu, Y. (2020).
+Fast nonseparable Gaussian stochastic process with application to methylation level interpolation.
+Journal of Computational and Graphical Statistics, 29(2), 250-260.
+\doi{10.1080/10618600.2019.1665534}
 }

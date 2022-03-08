@@ -3,6 +3,16 @@
 #' Estimation of the paramaters of the OLS_GaSP model model
 #' @param obj a list of objects create by the function svd_olsgasp.
 #' @return a list with all the object necessary to the prediction.
+#' @author Melina Ribaud
+#' @references Melina Ribaud, Aurélie Labbe and Karim Oualkacha.
+#' Imputation in genetic methylation studies: A linear model of coregionalization (LMC) with informative covariates.
+#' 2022. hal-00000000
+#'
+#' Gu, M., & Xu, Y. (2020).
+#' Fast nonseparable Gaussian stochastic process with application to methylation level interpolation.
+#' Journal of Computational and Graphical Statistics, 29(2), 250-260.
+#' \doi{10.1080/10618600.2019.1665534}
+#'
 #' @examples
 #'
 #'library(FastGP)

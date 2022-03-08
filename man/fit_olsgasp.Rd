@@ -40,3 +40,16 @@ Y_obs = A \%*\% V
 obj_olsgasp = svd_olsgasp(Y_obs,sites,X,tol_eig = 1e-6)
 obj_olsgasp = fit_olsgasp(obj_olsgasp)
 }
+\references{
+Melina Ribaud, Aurélie Labbe and Karim Oualkacha.
+Imputation in genetic methylation studies: A linear model of coregionalization (LMC) with informative covariates.
+2022. hal-00000000
+
+Gu, M., & Xu, Y. (2020).
+Fast nonseparable Gaussian stochastic process with application to methylation level interpolation.
+Journal of Computational and Graphical Statistics, 29(2), 250-260.
+\doi{10.1080/10618600.2019.1665534}
+}
+\author{
+Melina Ribaud
+}

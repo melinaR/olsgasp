@@ -6,6 +6,12 @@
 #' @param X a matrix, data frame or data table with the covariables same number of row as Y_obs.
 #' @param tol_eig the threshold for the eigen values of the wo SVD
 #' @return a list with all the object necessary to the estimation and prediction.
+#'
+#' @author Melina Ribaud
+#' @references Melina Ribaud, Aurélie Labbe and Karim Oualkacha.
+#' Imputation in genetic methylation studies: A linear model of coregionalization (LMC) with informative covariates.
+#' 2022. hal-00000000
+#'
 #' @examples
 #'
 #'library(FastGP)

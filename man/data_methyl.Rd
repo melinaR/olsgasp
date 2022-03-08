@@ -3,15 +3,17 @@
 \docType{data}
 \name{data_methyl}
 \alias{data_methyl}
-\title{equineDiffFactors}
+\title{data_methyl}
 \format{
-A data frame with 2256 rows and 8 variables
+A list with two elements: Y the matrix with the methylation level for each samples and sites,
+sites the genomic position of sites,
+X the covariate whith the cell type
 }
 \usage{
 data(data_methyl)
 }
 \description{
-Equine Influenza dataset
+Extract from the methylation data set of Ribaud et al. from site 119521761 to 119527907
 }
 \details{
 \itemize{
@@ -22,9 +24,11 @@ Equine Influenza dataset
 }
 }
 \references{
-\doi{/10.5281/zenodo.4837560}
+Melina Ribaud, Aurélie Labbe and Karim Oualkacha.
+Imputation in genetic methylation studies: A linear model of coregionalization (LMC) with informative covariates.
+2022. hal-00000000
 }
 \author{
-Melina Ribaud and Joseph Hughes
+Melina Ribaud
 }
 \keyword{equineDiffFactors}

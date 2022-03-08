@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-In this vignette, we illustrate ... 
+In this vignette, we apply the functions of the package *olsgasp* to a real case example. This example is an extract from the methylation dataset of the article **mettre ref**. 
 
 ## Install and load package 
 
@@ -35,10 +35,9 @@ install.packages("ggthemes")
 install.packages("tidyr")
 ```
 
-Note that *knitr* and *kableExtra* are used to visualize tables,  *ggplot2*, *ggrepel* and *ggthemes* to plot graphics and *stringr* to manipulate char.
+Note that *ggplot2*, *ggrepel* and *ggthemes* to plot graphics.
 
 ### Load packages
-
 ```{r, echo=TRUE, results='asis', warning=FALSE}
 suppressPackageStartupMessages(library(olsgasp))
 library(knitr)
@@ -50,6 +49,8 @@ library(tidyr)
 ```
 
 ## Load data
+
+Load the dataset. 
 
 ```{r}
 data(data_methyl)
@@ -63,6 +64,9 @@ N = ncol(Y)
 
 
 ## Simule missing data 
+
+The missing values are located from sample 2 to 8 and 10 to 15 for the sites 20 to 100 and 120 to 150.  
+
 ```{r}
 k_star = (1:K)[-c(1,9)]
 n_star = c(20:100,120:150)
@@ -72,17 +76,30 @@ Y_obs[k_star,n_star] = NA
 
 
 ## Initialize, fit and pred
+
+The model is initialized with the function *svd_olsgasp*, fitted with *fit_olsgasp* and the missing values are predicted with *pred_olsgasp*. 
+
+
 ```{r}
 obj_olsgasp = svd_olsgasp(Y_obs,sites,X,tol_eig = 1e-6)
 obj_olsgasp = fit_olsgasp(obj_olsgasp)
 Y_pred = pred_olsgasp(obj_olsgasp)
+```
+
+## Quality criteria
+
+The Quality criteria are calculated only on the missing values. 
+
+```{r}
 ind_na = is.na(Y_obs)
 R2(Y[ind_na],Y_pred[ind_na])
 RMSE(Y[ind_na],Y_pred[ind_na])
 ```
 
 ## Visualize results
-We choose two samples
+
+We choose two samples to visualize the true values of the processes and the predicted values. 
+
 ```{r}
 proc_a = 2
 proc_b = 10
@@ -90,7 +107,7 @@ proc_b = 10
 
 
 
-```{r}
+```{r fig.width=5.5}
 colorTitle = "black"
 sizeTitle = 15
 formeTitle = "bold.italic"

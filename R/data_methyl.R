@@ -1,6 +1,7 @@
-#' equineDiffFactors
+#' data_methyl
 #'
-#' Equine Influenza dataset
+#' Extract from the methylation data set of Ribaud et al. from site 119521761 to 119527907
+#'
 #'
 #' \itemize{
 #' \item ID.source are the ID of source hosts
@@ -13,7 +14,11 @@
 #' @keywords equineDiffFactors
 #' @name data_methyl
 #' @usage data(data_methyl)
-#' @format A data frame with 2256 rows and 8 variables
-#' @author Melina Ribaud and Joseph Hughes
-#' @references \doi{/10.5281/zenodo.4837560}
+#' @format A list with two elements: Y the matrix with the methylation level for each samples and sites,
+#' sites the genomic position of sites,
+#' X the covariate whith the cell type
+#' @author Melina Ribaud
+#' @references Melina Ribaud, Aurélie Labbe and Karim Oualkacha.
+#' Imputation in genetic methylation studies: A linear model of coregionalization (LMC) with informative covariates.
+#' 2022. hal-00000000
 NULL

@@ -45,3 +45,11 @@ for (d in 1:K) {
 Y_obs = A \%*\% V
 obj_olsgasp = svd_olsgasp(Y_obs,sites,X,tol_eig = 1e-6)
 }
+\references{
+Melina Ribaud, Aurélie Labbe and Karim Oualkacha.
+Imputation in genetic methylation studies: A linear model of coregionalization (LMC) with informative covariates.
+2022. hal-00000000
+}
+\author{
+Melina Ribaud
+}
